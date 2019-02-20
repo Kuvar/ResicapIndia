@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ResicapIndia;assembly=ResicapIndia"
+             x:Class="ResicapIndia.Views.UserListView" 
+             xmlns:viewModelBase="clr-namespace:ResicapIndia.ViewModels.Base;assembly=ResicapIndia"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true" 
+             NavigationPage.HasNavigationBar="True" Title="{Binding NewsSourse}" x:Name="AddressListPage" >
+    <ContentPage.Content>
+        <Grid>
+            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding AddressList}" RowHeight="120" SeparatorVisibility="None" Margin="2">
+                <ListView.Triggers>
+                    <EventTrigger Event="ItemSelected">
+                        <local:DeselectListViewItemAction/>
+                    </EventTrigger>
+                </ListView.Triggers>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="White" HasShadow="true" CornerRadius="10" Margin="8" Padding="0" BorderColor="{StaticResource DarGrayColor}">
+                                <Grid HorizontalOptions="FillAndExpand" Margin="0" Padding="0" RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="40"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{Binding Address}" Style="{StaticResource AddressTitle}"/>
+                                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="0" Padding="4,0,4,4" RowSpacing="0" BackgroundColor="{StaticResource PrimaryDark}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="50"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0" Source="map" BackgroundColor="{StaticResource PrimaryDark}" HeightRequest="32" WidthRequest="32" HorizontalOptions="Start" VerticalOptions="EndAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer 
+                                                    NumberOfTapsRequired="1" 
+                                                    Command="{Binding Path=BindingContext.MapCommand ,Source={x:Reference AddressListPage}}" 
+                                                    CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image Grid.Column="2" Source="navigation" BackgroundColor="{StaticResource PrimaryDark}"  HeightRequest="32" WidthRequest="32" HorizontalOptions="End" VerticalOptions="EndAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer 
+                                                    NumberOfTapsRequired="1" 
+                                                    Command="{Binding Path=BindingContext.NavigationCommand ,Source={x:Reference AddressListPage}}" 
+                                                    CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
