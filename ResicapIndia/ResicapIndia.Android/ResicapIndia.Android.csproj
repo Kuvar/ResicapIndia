@@ -70,11 +70,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
     <AndroidAsset Include="Assets\Fonts\Montserrat-Bold.ttf" />
     <AndroidAsset Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <AndroidAsset Include="Assets\Fonts\SourceSansPro-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

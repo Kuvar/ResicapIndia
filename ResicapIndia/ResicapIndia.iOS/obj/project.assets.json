@@ -941,11 +941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KUVAR\\Source\\Repos\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\ResicapIndia.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\KUVAR\\Documents\\GitHub\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\ResicapIndia.iOS.csproj",
       "projectName": "ResicapIndia.iOS",
-      "projectPath": "C:\\Users\\KUVAR\\Source\\Repos\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\ResicapIndia.iOS.csproj",
+      "projectPath": "C:\\Users\\KUVAR\\Documents\\GitHub\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\ResicapIndia.iOS.csproj",
       "packagesPath": "C:\\Users\\KUVAR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KUVAR\\Source\\Repos\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\obj\\",
+      "outputPath": "C:\\Users\\KUVAR\\Documents\\GitHub\\ResicapIndia\\ResicapIndia\\ResicapIndia.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -962,8 +962,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\KUVAR\\Source\\Repos\\ResicapIndia\\ResicapIndia\\ResicapIndia\\ResicapIndia.csproj": {
-              "projectPath": "C:\\Users\\KUVAR\\Source\\Repos\\ResicapIndia\\ResicapIndia\\ResicapIndia\\ResicapIndia.csproj"
+            "C:\\Users\\KUVAR\\Documents\\GitHub\\ResicapIndia\\ResicapIndia\\ResicapIndia\\ResicapIndia.csproj": {
+              "projectPath": "C:\\Users\\KUVAR\\Documents\\GitHub\\ResicapIndia\\ResicapIndia\\ResicapIndia\\ResicapIndia.csproj"
             }
           }
         }
